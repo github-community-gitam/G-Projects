@@ -1,12 +1,14 @@
 import './App.css';
-
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import LoginScreen from './components/LoginScreen';
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">
-        Hello world! this is your captain speaking
-      </h1>
-
+      <BrowserRouter>
+          <Routes>
+            <Route path='/login' element={<LoginScreen/>}/>
+          </Routes>
+      </BrowserRouter>
     </div>
   );
 }
