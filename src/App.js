@@ -1,16 +1,17 @@
 import React from "react";
-import './App.css';
-import {Routes,Route} from 'react-router-dom';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RegisterScreen from "./pages/RegisterScreen";
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" ></Route>
-        <Route path="/login" ></Route>
-        <Route path="/register" ></Route>
-      </Routes>
-
+    
+<BrowserRouter>
+<Routes>
+  <Route path='/register' element={<RegisterScreen/>}/>
+</Routes>
+</BrowserRouter>
     </div>
   );
 }
