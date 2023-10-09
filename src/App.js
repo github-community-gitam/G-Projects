@@ -9,7 +9,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/register' element={<RegisterScreen/>}/>
-            <Route path='/login' element={<LoginScreen/>}/>
+            <Route path='/login' element = {<LoginScreen/>}/>
+
           </Routes>
         </BrowserRouter>
     </div>
