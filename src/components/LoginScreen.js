@@ -44,7 +44,7 @@ function LoginScreen() {
             </button>
           </div>
           <div className="flex justify-start ml-16 mt-4 text-slate-500">
-          Don't have an account? <u><a href="/">Register</a></u>
+          Don't have an account? <u><a href="/register">Register</a></u>
           </div>
         </div>
       </div>

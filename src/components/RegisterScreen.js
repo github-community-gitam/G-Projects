@@ -60,7 +60,7 @@ export default function RegisterScreen() {
             </button>
           </div>
           <div className="flex justify-start ml-16 mt-4 text-slate-500">
-            Already have an account? <u>Login</u>
+            Already have an account? <u><a href="/login">Login</a></u>
           </div>
         </div>
       </div>
