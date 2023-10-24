@@ -408,7 +408,7 @@ export default function LandingScreen() {
       </a>
     </div>
     <div className="text-center relative left-[-350px] sm:text-left">
-  <p className="text-white text-center">Gitam University</p>
+  <p className="text-white text-center">GitHub Community Gitam</p>
   <p className="text-gray-500 text-sm">
     © 2023 Github Community
     <a
