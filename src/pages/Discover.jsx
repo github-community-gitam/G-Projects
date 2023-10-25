@@ -1,55 +1,106 @@
 import search from '../images/discover/search.svg'
 import sort from '../images/discover/sort.svg'
-
 import DiscoverCard from '../components/DiscoverCard'
+import left_1 from '../images/left_1.png'
+import GITHUB from '../images/GITHUB.png'
+import github_small from '../images/github_small.png'
+const PeopleList = [
+    {
+        profile: left_1,
+        name: 'Premsai Varma',
+        role:'Fullstack Developer',
+        batch:'2021-2025'
+
+    },
+    {
+        profile: left_1,
+        name: 'Premsai Varma',
+        role:'Fullstack Developer',
+        batch:'2021-2025'
+
+    },
+    {
+        profile: left_1,
+        name: 'Premsai Varma',
+        role:'Fullstack Developer',
+        batch:'2021-2025'
+
+    },
+    {
+        profile: left_1,
+        name: 'Premsai Varma',
+        role:'Fullstack Developer',
+        batch:'2021-2025'
+
+    },
+    {
+        profile: left_1,
+        name: 'Premsai Varma',
+        role:'Fullstack Developer',
+        batch:'2021-2025'
+
+    },
+    {
+        profile: left_1,
+        name: 'Premsai Varma',
+        role:'Fullstack Developer',
+        batch:'2021-2025'
+
+    },
+    {
+        profile: left_1,
+        name: 'Premsai Varma',
+        role:'Fullstack Developer',
+        batch:'2021-2025'
+
+    },
+    {
+        profile: left_1,
+        name: 'Premsai Varma',
+        role:'Fullstack Developer',
+        batch:'2021-2025'
+
+    },
+
+]
 
 const Discover = () => {
 
 
     return (
         <div className="h-screen w-screen">
-            <div className="navbar bg-base-100 w-full">
+            <div className="navbar bg-base-100 w-full px-4">
                 <div className="navbar-start">
                     <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li>
-                        <a>Parent</a>
-                        <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                    <li className='my-auto'><a>Home</a></li>
+                    <li className='my-auto'><a>Discover</a></li>
+                        
+                    <li className='my-auto'><a>Trending</a></li>
+                    <li className='my-auto'><a>About Us</a></li>
                     </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-xl outline-none"><img src={github_small}  style={{height:"45px", width:"45px"}} alt="github-icon" className='focus:outline-none hover:outline-none' /></a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li tabIndex={0}>
-                        <details>
-                        <summary>Parent</summary>
-                        <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                        </details>
-                    </li>
-                    <li><a>Item 3</a></li>
+                <div className="navbar-center hidden lg:flex bg-blue-300 px-8 xl:px-16 rounded-xl w-3/5">
+                    <ul className="menu menu-horizontal px-1 w-full flex justify-evenly font-bold text-xl">
+                    <li className='my-auto'><a>Home</a></li>
+                    <li className='my-auto'><a>Discover</a></li>
+                        <img src={GITHUB}  style={{height:"70px", width:"70px"}} alt="github-icon" className='' />
+                    <li className='my-auto'><a>Trending</a></li>
+                    <li className='my-auto'><a>About Us</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <a className="btn">Button</a>
                 </div>
             </div>
-            <div className='w-full'> 
-                <h1 className='text-lg text-base font-normal text-5xl py-5 text-center'>Discover People</h1>
-                <div className='flex m-auto text-center w-full'>
+            <div className='w-full md:flex m-auto px-16'> 
+                <h1 className='font-normal my-3 text-6xl py-5 text-center md:text-left md:w-4/6'>Discover People</h1>
+                <div className='flex m-auto md:w-2/6 text-center w-full max-w-xs space-x-3 ml-auto'>
                     <div className="m-auto border-2 border-gray-500 rounded-md w-full max-w-[300px] lg:max-w-sm flex align-center">
                     <input type="text" placeholder="Type here" className="focus:outline-none w-full px-4 py-2" />
                     <img src={search} style={{height:"40px", width:"40px"}} alt="search" className='self-center pr-1'/>
@@ -57,7 +108,9 @@ const Discover = () => {
                     <img src={sort} style={{height:"40px", width:"40px"}} alt="search" className='self-center px-1'/>
                 </div>
             </div>
-            <DiscoverCard />
+            <div className='w-full px-8 gap-3 smd:px-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
+                {PeopleList.map(people => <DiscoverCard details={people} />)}
+            </div>
         </div>
 
     )
