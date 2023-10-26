@@ -98,8 +98,8 @@ const Discover = () => {
                     <a className="btn">Button</a>
                 </div>
             </div>
-            <div className='w-full md:flex m-auto px-16'> 
-                <h1 className='font-normal my-3 text-6xl py-5 text-center md:text-left md:w-4/6'>Discover People</h1>
+            <div className='w-full md:flex md: align-center m-auto px-16'> 
+                <h1 className='font-normal my-3 text-6xl py-5 text-center md:text-left md:w-4/6 self-center'>Discover People</h1>
                 <div className='flex m-auto md:w-2/6 text-center w-full max-w-xs space-x-3 ml-auto'>
                     <div className="m-auto border-2 border-gray-500 rounded-md w-full max-w-[300px] lg:max-w-sm flex align-center">
                     <input type="text" placeholder="Type here" className="focus:outline-none w-full px-4 py-2" />
